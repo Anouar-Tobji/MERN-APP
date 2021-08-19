@@ -19,6 +19,7 @@ const[notes,setNotes] = useState([])
 const deleteHandler=(_id)=>{
     if(window.confirm("Are you sure ?")){
       axios.delete(`/api/notess/${_id}`)
+      fetchNotes()
       
       .then(window.confirm('deleted'))
 
